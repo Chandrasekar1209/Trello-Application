@@ -36,7 +36,30 @@ public class ConfigDataProvider {
 		return prop.getProperty("URL");
 	}
 
+	public String getEmailAddress() {
+		return prop.getProperty("emailAddress");
+	}
 	
+	public String getPassword() {
+		return prop.getProperty("password");
+	}
+	
+	public String getBoardTtile() {
+		return prop.getProperty("boardTitle");
+	}
+	
+	public String getListATitle() {
+		return prop.getProperty("listATitle");
+	}
+	
+	public String getListBTitle() {
+		return prop.getProperty("listBTitle");
+	}
+	
+	public String getCardContent() {
+		return prop.getProperty("cardAContent");
+	}
+
 	
 	public String getDataFromConfig(String keyToSearch) {
 		return prop.getProperty(keyToSearch);

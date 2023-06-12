@@ -6,17 +6,16 @@ import org.testng.annotations.Test;
 import trello.base.TestBase;
 
 public class CreationOfTrelloBoardAndListTest extends TestBase {
-	String boardTitle="AutomationBoard 02";
+	
 	
 	@Test
 	public void testTrelloApplication() {
 
-		login.loginToTrello("mchandrasekar233@gmail.com","Welcome@123");
-		dashBoard.creationOfBoard(boardTitle);
-		yourBoards.creationOfCards(boardTitle,"List A","List B","Card Content for List A");
+		login.loginToTrello(config.getEmailAddress(),config.getPassword());
+		dashBoard.creationOfBoard(config.getBoardTtile());
+		yourBoards.creationOfCards(config.getBoardTtile(),config.getListATitle(),config.getListBTitle(),config.getCardContent());
 		yourBoards.checkDragAndDropAndXYCoordinates();
 		dashBoard.logOut();
-
 	}
 
 
